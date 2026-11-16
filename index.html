@@ -47,7 +47,7 @@
   nav ul{display:flex;gap:20px;list-style:none}
   nav a{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--muted)}
   nav a:hover{color:var(--signal);text-decoration:none}
-  @media (max-width:640px){ .brand{display:none} nav ul{gap:14px} nav a{font-size:.72rem} }
+  @media (max-width:640px){ .brand{display:none} nav ul{gap:10px} nav a{font-size:.68rem} }
 
   /* ---------- Hero terminal ---------- */
   .hero{padding:80px 0 72px}
@@ -120,6 +120,16 @@
   .job li{padding-left:18px;position:relative;margin-top:6px}
   .job li::before{content:"▸";position:absolute;left:0;color:var(--signal)}
 
+  /* Projects */
+  .project{padding:22px 0;border-bottom:1px dashed var(--line)}
+  .project:last-child{border-bottom:none}
+  .project h3{font-family:"Chakra Petch",sans-serif;font-size:1.05rem;color:#EAF1F9}
+  .project .meta{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--warn);margin:4px 0 8px}
+  .project p{color:var(--muted);max-width:70ch}
+  .project p + p{margin-top:10px}
+  .project .note{font-size:.88rem}
+  .project .links{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-family:"IBM Plex Mono",monospace;font-size:.78rem}
+
   /* Skills */
   .skill-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
   .card{
@@ -163,6 +173,7 @@
       <ul>
         <li><a href="#about">about</a></li>
         <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
         <li><a href="#skills">skills</a></li>
         <li><a href="#certs">certs</a></li>
         <li><a href="#contact">contact</a></li>
@@ -265,6 +276,24 @@
         <li>The Aerial Man (Scotland): installed and configured CCTV, smart home systems, and signal/wiring solutions.</li>
         <li>Odesus S.A.: designed and supervised IT, telecom, and physical security system installations to standard.</li>
       </ul>
+    </article>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="wrap">
+    <span class="sec-label"># projects</span>
+    <h2>Projects</h2>
+
+    <article class="project">
+      <h3>PharmUniverse Security Management Plan</h3>
+      <p class="meta">[grc] ISO/IEC 27001:2022 · CVSS v3.1 · ALE / ROSI · Python</p>
+      <p>A 53-page ISMS plan for a fictional multinational pharmaceutical manufacturer. Five risks to two critical assets are scored with CVSS v3.1 and annualised loss expectancy; six Annex A controls cut expected annual loss from about £6.35m to £1.38m (78%), backed by cost-benefit and sensitivity analysis, a Statement of Applicability extract and a 15-month certification roadmap.</p>
+      <p>A Python model reproduces every risk, control and cost figure, so the numbers can be checked and re-run.</p>
+      <p class="note">Fictional case study adapted from an ISACA caselet. It began as MSc coursework in 2023 and was redrafted in 2026 with AI assistance; the README explains how.</p>
+      <div class="links">
+        <a href="projects/pharmuniverse-security-management-plan/Security_Management_Plan_PharmUniverse.pdf">→ read the plan (PDF)</a>
+        <a href="https://github.com/Sakis-T/Sakis-T.github.io/tree/main/projects/pharmuniverse-security-management-plan" rel="noopener">→ README &amp; risk model on GitHub</a>
+      </div>
     </article>
   </section>
 
